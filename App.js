@@ -145,21 +145,49 @@ app.post('/edit',function(req,res){
 console.log(s);
     const pdfDoc = new HummusRecipe('uploads/' + s,'Saved/'+ s);
     const pdffile=fs.readFileSync('uploads/' + s);
+    var page=req.body.page;
+    var one=Number(req.body.first);
+    var two=Number(req.body.last);
     
+    console.log(page);
     pdfparse(pdffile).then(function (data)
     {
     count=data.numpages;
+    var pagenumber=count;
+    if(page<=count&& page>0)
+    {
+    pagenumber=Number(page);
+    }
+    else{
+        pagenumber=data.numpages;
+    }
     pdfDoc
-          .editPage(count)
-          .text('Signature Here', 448, 638,{color: '#050505',fontSize: 9})
-          .rectangle(448, 648, 102, 59,{stroke: '#050505',lineWidth: 1})
-          .image('C:/Users/kesha/Downloads/signature.jpg', 449, 649, {width: 100, keepAspectRatio: true})
-          .text(str, 448, 708,{color: '#050505',fontSize: 9})
+          .editPage(pagenumber)
+          .text('Signature Here', one , two,{color: '#050505',fontSize: 9})
+          .rectangle(one, two+10, 102, 59,{stroke: '#050505',lineWidth: 1})
+          .image('C:/Users/kesha/Downloads/signature.jpg', one+1, two+11, {width: 100, keepAspectRatio: true})
+          .text(str, one, two+70,{color: '#050505',fontSize: 9})
           .endPage()
           .endPDF();
           var filePath = 'C:/Users/kesha/Downloads/signature.jpg'; 
           fs.unlinkSync(filePath);
             res.render('home.ejs');
+    //}
+    // else if(page=='Last'||page=='LAST'||page=='last')
+    // {
+    //     pdfDoc
+    //     .editPage(page)
+    //     .text('Signature Here', one , two,{color: '#050505',fontSize: 9})
+    //     .rectangle(one, two+10, 102, 59,{stroke: '#050505',lineWidth: 1})
+    //     .image('C:/Users/kesha/Downloads/signature.jpg', one+1, two+11, {width: 100, keepAspectRatio: true})
+    //     .text(str, one, two+70,{color: '#050505',fontSize: 9})
+    //     .endPage()
+    //     .endPDF();
+    //     var filePath = 'C:/Users/kesha/Downloads/signature.jpg'; 
+    //     fs.unlinkSync(filePath);
+    //       res.render('home.ejs');
+    // }
+
     }) 
 
 

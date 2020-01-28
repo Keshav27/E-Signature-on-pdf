@@ -22,3 +22,31 @@
 [ 28/01/2020 00:14:20 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
 [ 28/01/2020 00:14:20 ] ObjectsContext::WriteXrefTable, Unexpected Failure. Object of ID = 55 was not registered as written. probably means it was not written
 [ 28/01/2020 00:14:20 ] PDFWriter::EndPDF, Could not end PDF
+[ 28/01/2020 12:49:38 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 12:49:38 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 12:49:38 ] ObjectsContext::WriteXrefStream, Unexpected Failure. Object of ID = 95 was not registered as written. probably means it was not written
+[ 28/01/2020 12:49:38 ] PDFWriter::EndPDF, Could not end PDF
+[ 28/01/2020 13:33:17 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 13:33:17 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 13:33:17 ] ObjectsContext::WriteXrefStream, Unexpected Failure. Object of ID = 95 was not registered as written. probably means it was not written
+[ 28/01/2020 13:33:17 ] PDFWriter::EndPDF, Could not end PDF
+[ 28/01/2020 13:38:41 ] AbstractContentContext::PDFModifiedPage, null page object
+[ 28/01/2020 13:39:12 ] AbstractContentContext::PDFModifiedPage, null page object
+[ 28/01/2020 13:40:12 ] AbstractContentContext::PDFModifiedPage, null page object
+[ 28/01/2020 15:03:30 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 15:03:30 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 15:03:30 ] ObjectsContext::WriteXrefStream, Unexpected Failure. Object of ID = 95 was not registered as written. probably means it was not written
+[ 28/01/2020 15:03:30 ] PDFWriter::EndPDF, Could not end PDF
+[ 28/01/2020 15:03:59 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 15:03:59 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 15:03:59 ] ObjectsContext::WriteXrefStream, Unexpected Failure. Object of ID = 95 was not registered as written. probably means it was not written
+[ 28/01/2020 15:03:59 ] PDFWriter::EndPDF, Could not end PDF
+[ 28/01/2020 15:10:40 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 15:10:40 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 28/01/2020 15:10:40 ] ObjectsContext::WriteXrefStream, Unexpected Failure. Object of ID = 95 was not registered as written. probably means it was not written
+[ 28/01/2020 15:10:40 ] PDFWriter::EndPDF, Could not end PDF
+[ 28/01/2020 15:49:44 ] AbstractContentContext::PDFModifiedPage, null page object
+[ 28/01/2020 15:51:07 ] AbstractContentContext::PDFModifiedPage, null page object
+[ 28/01/2020 15:53:25 ] AbstractContentContext::PDFModifiedPage, null page object
+[ 28/01/2020 15:54:22 ] AbstractContentContext::PDFModifiedPage, null page object
+[ 28/01/2020 15:56:00 ] AbstractContentContext::PDFModifiedPage, null page object
