@@ -15,19 +15,9 @@ var session=require('client-sessions')
 var pdfparse=require('pdf-parse');
 var s;
 
+app.set( 'port', ( process.env.PORT || 5000 ));
 
 
-let tss = Date.now();
-let date_ob = new Date(tss);
-let date = date_ob.getDate();
-let month = date_ob.getMonth() + 1;
-let year = date_ob.getFullYear();
-let hours = date_ob.getHours();
-let minutes = date_ob.getMinutes();
-let seconds = date_ob.getSeconds();
-
-var str="Signed on - "+hours+":"  +minutes+":"+seconds+" - "+  date + "-" + month + "-" + year;
-console.log(str);
 var count=0;
 
 app.set('view engine','ejs')
@@ -40,6 +30,12 @@ app.use(session({
     duration: 30 * 60 * 1000,
     activeDuration: 5 * 60 * 1000,
 }));
+
+app.get('/', function(req, res){
+    res.redirect('/home');
+ });
+
+
 app.post('/login_validation',function(req,res){
     console.log(req.body);
     console.log(req.body.empid+"'   '"+req.body.empass);
@@ -140,8 +136,18 @@ app.get('/edit',function(req,res){
 })
 
 app.post('/edit',function(req,res){
-//console.log(req.body);
-//s = req.params.file;
+    let tss = Date.now();
+let date_ob = new Date(tss);
+let date = date_ob.getDate();
+let month = date_ob.getMonth() + 1;
+let year = date_ob.getFullYear();
+let hours = date_ob.getHours();
+let minutes = date_ob.getMinutes();
+let seconds = date_ob.getSeconds();
+
+var str="Signed on - "+hours+":"  +minutes+":"+seconds+" - "+  date + "-" + month + "-" + year;
+console.log(str);
+
 console.log(s);
     const pdfDoc = new HummusRecipe('uploads/' + s,'Saved/'+ s);
     const pdffile=fs.readFileSync('uploads/' + s);
@@ -150,6 +156,7 @@ console.log(s);
     var two=Number(req.body.last);
     
     console.log(page);
+    if(page!='all'){
     pdfparse(pdffile).then(function (data)
     {
     count=data.numpages;
@@ -172,25 +179,31 @@ console.log(s);
           var filePath = 'C:/Users/kesha/Downloads/signature.jpg'; 
           fs.unlinkSync(filePath);
             res.render('home.ejs');
-    //}
-    // else if(page=='Last'||page=='LAST'||page=='last')
-    // {
-    //     pdfDoc
-    //     .editPage(page)
-    //     .text('Signature Here', one , two,{color: '#050505',fontSize: 9})
-    //     .rectangle(one, two+10, 102, 59,{stroke: '#050505',lineWidth: 1})
-    //     .image('C:/Users/kesha/Downloads/signature.jpg', one+1, two+11, {width: 100, keepAspectRatio: true})
-    //     .text(str, one, two+70,{color: '#050505',fontSize: 9})
-    //     .endPage()
-    //     .endPDF();
-    //     var filePath = 'C:/Users/kesha/Downloads/signature.jpg'; 
-    //     fs.unlinkSync(filePath);
-    //       res.render('home.ejs');
-    // }
+    
 
     }) 
-
-
+    }
+else if(page=='all'){
+    pdfparse(pdffile).then(function (data)
+    {
+    count=data.numpages;
+    for(var i=1;i<=count;i++)
+    {
+        
+        pdfDoc
+          .editPage(i)
+          .text('Signature Here', one , two,{color: '#050505',fontSize: 9})
+          .rectangle(one, two+10, 102, 59,{stroke: '#050505',lineWidth: 1})
+          .image('C:/Users/kesha/Downloads/signature.jpg', one+1, two+11, {width: 100, keepAspectRatio: true})
+          .text(str, one, two+70,{color: '#050505',fontSize: 9})
+          .endPage()
+    }pdfDoc
+    .endPDF();
+          var filePath = 'C:/Users/kesha/Downloads/signature.jpg'; 
+          fs.unlinkSync(filePath);
+            res.render('home.ejs');
+    })
+}
       
 })
 
@@ -207,4 +220,6 @@ app.get('/',function(req,res){
 
 
 
-app.listen(4000);
+app.listen( app.get( 'port' ), function() {
+    console.log( 'Node server is running on port ' + app.get( 'port' ));
+    });
