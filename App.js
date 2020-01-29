@@ -32,7 +32,7 @@ app.use(session({
 }));
 
 app.get('/', function(req, res){
-    res.redirect('/home');
+    res.render('home.ejs');
  });
 
 
