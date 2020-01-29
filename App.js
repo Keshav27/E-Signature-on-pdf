@@ -15,10 +15,6 @@ var session=require('client-sessions')
 var pdfparse=require('pdf-parse');
 var s;
 
-const server = require('http').createServer(app);
-const io = require('socket.io')(server);
-io.on('connection', () => { /* … */ });
-
 app.set( 'port', ( process.env.PORT || 5000 ));
 
 
