@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset = "UTF-8" />
+        <style>
+        .form-register {
+            max-width: 380px;
+            padding: 15px 35px 45px;
+            margin: 150 auto;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .reg_button {
+                background-color:midnightblue; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                padding-left: 300px;
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="form-register">
+            <h1>Registration</h1>
+            <p id="empid_present" style="color: red;"></p>
+            Enter employee-id&nbsp;<input type="text" name="empid" id="empid" required><br><br>
+            Enter name&nbsp;<input type='text' name='name' id='name'><br><br>
+            Enter password&nbsp;<input type="password" name="password" id='password'><br><br>
+            Enter email&nbsp;<input type="email" name="email" id='email'><br><br>
+            Enter contact number&nbsp;<input type="text" name="phno" id='phno'><br><br>
+            <button id='register' class="reg_button">submit</button>
+        </div>
+
+
+        <script>
+            register.addEventListener('click',function(){
+                var empid=document.getElementById('empid').value;
+                var name=document.getElementById('name').value;
+                var password=document.getElementById('password').value;
+                var email=document.getElementById('email').value;
+                var phno=document.getElementById('phno').value;
+                if(empid=='' || name=='' || password=='' || email=='' || phno==''){
+                    alert("Enter all fields");
+                    return;
+                }
+                var data={
+                    empid :empid,
+                    name : name,
+                    password : password,
+                    email : email,
+                    contactno : phno,
+                    
+                }
+                console.log(data);
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('POST', '/registration', true);
+                xhttp.setRequestHeader('Content-Type', 'application/json')
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState== 4 && this.status == 200){
+                        console.log(this.responseText);
+                        var json=JSON.parse(this.responseText);
+                        if(json.status=='Registered'){
+                            window.location.replace('/');
+                        }else{
+                            console.log("^^^^^^^^^^");
+                            document.getElementById('empid_present').innerHTML="*Employee-id has been already Registered";
+                            // console.log("Registration response");
+                            // window.location.replace('/regerror');
+                        }
+                    }
+                };
+                xhttp.send(JSON.stringify(data));
+            })
+
+        </script>
+    </body>
+</html>

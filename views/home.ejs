@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Upload Example</title>
+</head>
+<body>
+    <form action="/sign" method="get">
+        <p>Please Add Your Signature here : </p><input type="submit" value="Sign">
+    </form><br>
+<form action="/home" enctype="multipart/form-data" method="post">
+    <p>Please choose file here : </p>
+    <input type="file" name="upload" multiple><br><br>
+    <p>Upload your file : </p>
+    <input type="submit" value="Upload">
+    
+    
+</form>
+
+</body>
+</html>

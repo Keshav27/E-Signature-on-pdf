@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style>
+            .form-signin {
+                max-width: 380px;
+                padding: 15px 35px 45px;
+                margin: 150 auto;
+                background-color: #fff;
+                border: 1px solid rgba(0,0,0,0.1); 
+            }
+            .forminput {
+                position: relative;
+                font-size: 16px;
+                height: auto;
+                padding: 10px;
+                padding-left: 180px;                   
+            }
+            .login_button {
+                background-color: midnightblue; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                padding-left: 320px;
+                font-size: 16px;
+            }
+            .reg_button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                padding-left: 300px;                
+            }
+        </style>
+    </head>
+    <body>                
+        <div class="form-signin">
+            <h1>Login</h1>
+            <p id="login_invalid" style="color: red;"></p>
+            Employee-id: <input type="text" name="empid" id="Employee-id" class="forminput" placeholder="Employee-id"><br>
+            Password:<input type="password" name="password" id="password" class="forminput" placeholder="Password"><br>
+            <br>
+            <button id='login' class="login_button">login</button><br>
+            <br>
+            <button id='register' class="reg_button">register</button>
+        </div>            
+    </body>
+    <script>
+        register.addEventListener('click',function(){
+            window.location.replace('/register')
+        })
+        var input = document.getElementById("Employee-id");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+            document.getElementById("login").click();
+            }
+        });
+        var pass = document.getElementById("password");
+        pass.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+            document.getElementById("login").click();
+            }
+        });    
+        login.addEventListener("click",function(){
+        // var name ='someName';
+        var id=document.getElementById('Employee-id').value;
+        var password=document.getElementById('password').value;
+        //console.log(req);
+        console.log("123123123");
+        var xhttp = new XMLHttpRequest();
+        xhttp.open('POST', '/login_validation', true);
+        xhttp.setRequestHeader('Content-Type', 'application/json')
+        xhttp.onreadystatechange = function(){
+            var jsonres=JSON.parse(this.responseText);
+            if(this.readyState== 4 && this.status == 200){
+                if(jsonres.status=='Invalid'){    
+                    document.getElementById('login_invalid').innerHTML="* Invalid Credentials";           
+                    // window.location.replace('/')
+                }else{
+                    console.log("login ok");
+                    window.location.replace('home')
+                }
+	        }
+        };
+        xhttp.send(JSON.stringify({empid : id,empass: password}));
+        })        
+    </script>
+</html>
