@@ -2,6 +2,9 @@
   "name": "chatbot",
   "version": "1.0.0",
   "description": "darwinbox",
+  "scripts": {
+    "start":"node App.js"
+  },
   "main": "App.js",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -17,9 +20,7 @@
     "pdf-parse": "^1.1.1"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+
   "author": "",
   "license": "ISC"
 }
