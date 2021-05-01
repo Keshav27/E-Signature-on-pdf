@@ -58,3 +58,31 @@
 [ 28/01/2020 17:48:48 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
 [ 28/01/2020 17:48:48 ] ObjectsContext::WriteXrefStream, Unexpected Failure. Object of ID = 95 was not registered as written. probably means it was not written
 [ 28/01/2020 17:48:48 ] PDFWriter::EndPDF, Could not end PDF
+[ 01/05/2021 14:38:40 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:38:41 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:38:41 ] ObjectsContext::WriteXrefTable, Unexpected Failure. Object of ID = 62 was not registered as written. probably means it was not written
+[ 01/05/2021 14:38:41 ] PDFWriter::EndPDF, Could not end PDF
+[ 01/05/2021 14:39:37 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:39:37 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:39:37 ] ObjectsContext::WriteXrefTable, Unexpected Failure. Object of ID = 62 was not registered as written. probably means it was not written
+[ 01/05/2021 14:39:37 ] PDFWriter::EndPDF, Could not end PDF
+[ 01/05/2021 14:40:07 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:40:07 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:40:07 ] ObjectsContext::WriteXrefTable, Unexpected Failure. Object of ID = 62 was not registered as written. probably means it was not written
+[ 01/05/2021 14:40:07 ] PDFWriter::EndPDF, Could not end PDF
+[ 01/05/2021 14:42:11 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:42:11 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:42:11 ] ObjectsContext::WriteXrefTable, Unexpected Failure. Object of ID = 62 was not registered as written. probably means it was not written
+[ 01/05/2021 14:42:11 ] PDFWriter::EndPDF, Could not end PDF
+[ 01/05/2021 14:43:27 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:43:27 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:43:27 ] ObjectsContext::WriteXrefTable, Unexpected Failure. Object of ID = 62 was not registered as written. probably means it was not written
+[ 01/05/2021 14:43:27 ] PDFWriter::EndPDF, Could not end PDF
+[ 01/05/2021 14:52:09 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:52:09 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/kesha/Downloads/signature.jpg
+[ 01/05/2021 14:52:09 ] ObjectsContext::WriteXrefTable, Unexpected Failure. Object of ID = 32 was not registered as written. probably means it was not written
+[ 01/05/2021 14:52:09 ] PDFWriter::EndPDF, Could not end PDF
+[ 01/05/2021 16:15:39 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/hp/Downloads/signature.jpg
+[ 01/05/2021 16:15:39 ] InputFile::OpenFile, Unexpected Failure. Cannot open file for reading - C:/Users/hp/Downloads/signature.jpg
+[ 01/05/2021 16:15:39 ] ObjectsContext::WriteXrefTable, Unexpected Failure. Object of ID = 62 was not registered as written. probably means it was not written
+[ 01/05/2021 16:15:39 ] PDFWriter::EndPDF, Could not end PDF
