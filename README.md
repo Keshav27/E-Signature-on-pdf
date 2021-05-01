@@ -10,5 +10,6 @@ Steps to use the application:
 3.Add the PDF file on which you want to insert the signature.<br />
 4.Add page number and coordinates of page where you want to insert the signature.<br />
 5.Click submit.<br />
+6.Signature inserted in PDF.
 
-Signature inserted in PDF.
+Please see DEMO.docs file for screenshots of the application.
