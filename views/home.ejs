@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Simple Upload Example</title>
-</head>
-<body>
-    <form action="/sign" method="get">
-        <p>Please Add Your Signature here : </p><input type="submit" value="Sign">
-    </form><br>
-<form action="/home" enctype="multipart/form-data" method="post">
-    <p>Please choose file here : </p>
-    <input type="file" name="upload" multiple><br><br>
-    <p>Upload your file : </p>
-    <input type="submit" value="Upload">
-    
-    
-</form>
+    <style>
+        body {
+            background: url("./backgroundimage.jpg") no-repeat center center fixed;
+            background-size: cover;
+            margin-top: 200px;
+            margin-left: 50px;
+            font-size: 30px;
+            font-family: monospace;
+        }
 
+        input {
+            font-size: 20px;
+            padding: 8px 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Signature</h1><br>
+    <form action="/sign" method="get">
+        <p>Please Add Your Signature here :
+            <input type="submit" value="Sign">
+        </p>
+    </form>
+    <form action="/home" enctype="multipart/form-data" method="post">
+        <p class='inpt-text'>Please choose file here :
+            <input type="file" style="font-family: monospace;padding: 0px;font-size: 20px;" name="upload" multiple><br>
+        </p>
+        <p>Upload your file :
+            <input type="submit" value="Upload">
+        </p>
+    </form>
 </body>
+
 </html>

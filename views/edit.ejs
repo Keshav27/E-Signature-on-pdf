@@ -2,22 +2,33 @@
 <html>
 <head>
     <title>Simple Upload Example</title>
+    <style>
+        body {
+            background: url("./backgroundimage.jpg") no-repeat center center fixed;
+            background-size: cover;
+            margin-top: 200px;
+            margin-left: 50px;
+            font-size: 30px;
+            font-family: monospace;
+        }
+        input {
+            font-size: 20px;
+            padding: 8px 20px;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
-<form action="/edit"  method="post">
-    <h1>Are You Sure ?</h1><br>
-    
-        First Coordinate:<br>
-        <input type="number" name="first" required><br>
-        Second Coordinate:<br>
-        <input type="number" name="last" required><br>
-        Page Number:<br>
+    <form action="/edit" method="post">
+        <h1>Page Details</h1><br>
+        First Coordinate:&nbsp;
+        <input type="number" name="first" required><br><br>
+        Second Coordinate:
+        <input type="number" name="last" required><br><br>
+        Page Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="text" name="page">
-        <p>Enter the page number where you want to insert.Leave empty if you want to print sign on last page.Typwe all to sign all pages.</p>
-        <br>
-        <br>
-
-    <input type="submit" value="Submit">
-</form>
+        <p>Enter the page number to insert the signature.Type <b>all</b> to sign all pages.</p>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
